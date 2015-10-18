@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UVRasterizer.MeshData
 {
-    class Mesh
+    public class Mesh
     {
         public Vector3[] vertices;
         public Vector2[] uv;

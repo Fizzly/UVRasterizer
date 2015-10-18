@@ -12,7 +12,7 @@ namespace UVRasterizer.ObjLoader
     using System.Text;
     using MeshData;
 
-    public class ObjImporter
+    public class OBJToMesh
     {
 
         private struct meshStruct
