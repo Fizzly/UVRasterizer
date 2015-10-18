@@ -15,8 +15,9 @@ namespace UVRasterizer
 {
     public partial class MainForm : Form
     {
-        private IRasterizer rasterizer = new DebugRasterizer();
+        private IRasterizer rasterizer = new SimpleRasterizer();
         private Mesh mesh;
+        private Bitmap texture;
 
         public MainForm()
         {
@@ -25,7 +26,7 @@ namespace UVRasterizer
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            pictureBoxRasterizedImage.Image = rasterizer.RasterizeData();
+
         }
 
         private void buttonLoadOBJ_Click(object sender, EventArgs e)
@@ -38,7 +39,24 @@ namespace UVRasterizer
             {
                 OBJToMesh OBJConverter = new OBJToMesh();
                 mesh = OBJConverter.ImportFile(fileDialog.FileName);
+                
+                texture = rasterizer.RasterizeData(mesh);
+                pictureBoxRasterizedImage.Image = texture;
+            }
+        }
 
+        private void buttonSaveTexture_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog fileDialog = new SaveFileDialog();
+            fileDialog.Filter = "OBJ Models (.obj)|*.obj|All Files (*.*)|*.*";
+            fileDialog.FilterIndex = 1;
+
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                if(texture!=null)
+                {
+                    texture.Save(fileDialog.FileName);
+                }
             }
         }
     }

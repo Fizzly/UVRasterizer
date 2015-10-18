@@ -30,6 +30,7 @@
         {
             this.pictureBoxRasterizedImage = new System.Windows.Forms.PictureBox();
             this.buttonLoadOBJ = new System.Windows.Forms.Button();
+            this.buttonSaveTexture = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRasterizedImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,11 +53,22 @@
             this.buttonLoadOBJ.UseVisualStyleBackColor = true;
             this.buttonLoadOBJ.Click += new System.EventHandler(this.buttonLoadOBJ_Click);
             // 
+            // buttonSaveTexture
+            // 
+            this.buttonSaveTexture.Location = new System.Drawing.Point(530, 57);
+            this.buttonSaveTexture.Name = "buttonSaveTexture";
+            this.buttonSaveTexture.Size = new System.Drawing.Size(140, 39);
+            this.buttonSaveTexture.TabIndex = 2;
+            this.buttonSaveTexture.Text = "Save Bitmap";
+            this.buttonSaveTexture.UseVisualStyleBackColor = true;
+            this.buttonSaveTexture.Click += new System.EventHandler(this.buttonSaveTexture_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 889);
+            this.Controls.Add(this.buttonSaveTexture);
             this.Controls.Add(this.buttonLoadOBJ);
             this.Controls.Add(this.pictureBoxRasterizedImage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -73,6 +85,7 @@
 
         private System.Windows.Forms.PictureBox pictureBoxRasterizedImage;
         private System.Windows.Forms.Button buttonLoadOBJ;
+        private System.Windows.Forms.Button buttonSaveTexture;
     }
 }
 

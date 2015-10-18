@@ -33,5 +33,10 @@ namespace UVRasterizer.Rasterizer
                 }
             }
         }
+
+        public Bitmap RasterizeData(MeshData.Mesh mesh)
+        {
+ 	        throw new NotImplementedException();
+        }
     }
 }

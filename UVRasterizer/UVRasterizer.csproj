@@ -56,6 +56,7 @@
     <Compile Include="ObjLoader\ObjLoader.cs" />
     <Compile Include="Rasterizer\DebugRasterizer.cs" />
     <Compile Include="Rasterizer\IRasterizer.cs" />
+    <Compile Include="Rasterizer\SimpleRasterizer.cs" />
     <Compile Include="UVRasterizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
