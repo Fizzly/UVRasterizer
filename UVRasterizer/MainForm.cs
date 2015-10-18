@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using UVRasterizer.Rasterizer;
+
 namespace UVRasterizer
 {
     public partial class MainForm : Form
     {
+
+        private IRasterizer rasterizer = new DebugRasterizer();
+
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            pictureBoxRasterizedImage.Image = rasterizer.RasterizeData();
         }
     }
 }
