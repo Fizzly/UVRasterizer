@@ -50,6 +50,10 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MeshData\Mesh.cs" />
+    <Compile Include="MeshData\Vector2.cs" />
+    <Compile Include="MeshData\Vector3.cs" />
+    <Compile Include="ObjLoader\ObjLoader.cs" />
     <Compile Include="Rasterizer\DebugRasterizer.cs" />
     <Compile Include="Rasterizer\IRasterizer.cs" />
     <Compile Include="UVRasterizer.cs" />

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pictureBoxRasterizedImage = new System.Windows.Forms.PictureBox();
+            this.buttonLoadOBJ = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRasterizedImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -36,16 +37,27 @@
             // 
             this.pictureBoxRasterizedImage.Location = new System.Drawing.Point(12, 12);
             this.pictureBoxRasterizedImage.Name = "pictureBoxRasterizedImage";
-            this.pictureBoxRasterizedImage.Size = new System.Drawing.Size(256, 256);
+            this.pictureBoxRasterizedImage.Size = new System.Drawing.Size(512, 512);
             this.pictureBoxRasterizedImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxRasterizedImage.TabIndex = 0;
             this.pictureBoxRasterizedImage.TabStop = false;
+            // 
+            // buttonLoadOBJ
+            // 
+            this.buttonLoadOBJ.Location = new System.Drawing.Point(530, 12);
+            this.buttonLoadOBJ.Name = "buttonLoadOBJ";
+            this.buttonLoadOBJ.Size = new System.Drawing.Size(140, 39);
+            this.buttonLoadOBJ.TabIndex = 1;
+            this.buttonLoadOBJ.Text = "Browse .OBJ";
+            this.buttonLoadOBJ.UseVisualStyleBackColor = true;
+            this.buttonLoadOBJ.Click += new System.EventHandler(this.buttonLoadOBJ_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 889);
+            this.Controls.Add(this.buttonLoadOBJ);
             this.Controls.Add(this.pictureBoxRasterizedImage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -60,6 +72,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxRasterizedImage;
+        private System.Windows.Forms.Button buttonLoadOBJ;
     }
 }
 
